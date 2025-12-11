@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Diskusi UTBK – Kategori</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-mortarboard-fill"></i> UTBK Forum
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-primary ms-2 px-3 rounded-pill"" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-primary ms-2 px-3 rounded-pill"" href="kategori.html">Kategori</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-primary ms-2 px-3 rounded-pill" href="komunitas.html">Komunitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-primary ms-2 px-3 rounded-pill"" href="diskusi.html">Diskusi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-primary ms-2 px-3 rounded-pill"" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-primary ms-2 px-3 rounded-pill" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Daftar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="kategori">
+        <div class="container text-center">
+            <h1><i class="bi bi-people-fill"></i> Mata Pelajaran dan Topik </h1>
+            <p>Pilih mata pelajaran atau topik yang kalian butuhkan</p>
+            <button class="btn btn-light btn-lg mt-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#createCategoryModal">
+                <i class="bi bi-plus-circle"></i> Tambah Mata Pelajaran
+            </button>
+        </div>
+    </section>
+    
+    <!-- Kategori Section -->
+    <section class="container mb-5" id="kategori">
+        <h2 class="mb-4 fw-bold">Kategori Diskusi</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card category-card">
+                    <div class="card-body text-center">
+                        <div class="category-icon bg-primary bg-opacity-10 text-primary mx-auto">
+                            <i class="bi bi-calculator"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Tes Potensi Skolastik</h5>
+                        <p class="card-text text-muted">Pemahaman bacaan, penalaran matematika, dan pengetahuan kuantitatif</p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <small class="text-muted"><i class="bi bi-chat"></i> 543 Topik</small>
+                            <small class="text-muted"><i class="bi bi-people"></i> 892 Anggota</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card category-card">
+                    <div class="card-body text-center">
+                        <div class="category-icon bg-success bg-opacity-10 text-success mx-auto">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Matematika</h5>
+                        <p class="card-text text-muted">Aljabar, kalkulus, geometri, dan statistika</p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <small class="text-muted"><i class="bi bi-chat"></i> 678 Topik</small>
+                            <small class="text-muted"><i class="bi bi-people"></i> 1,024 Anggota</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card category-card">
+                    <div class="card-body text-center">
+                        <div class="category-icon bg-warning bg-opacity-10 text-warning mx-auto">
+                            <i class="bi bi-book"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Bahasa Indonesia</h5>
+                        <p class="card-text text-muted">Tata bahasa, pemahaman teks, dan penulisan</p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <small class="text-muted"><i class="bi bi-chat"></i> 423 Topik</small>
+                            <small class="text-muted"><i class="bi bi-people"></i> 756 Anggota</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card category-card">
+                    <div class="card-body text-center">
+                        <div class="category-icon bg-danger bg-opacity-10 text-danger mx-auto">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Bahasa Inggris</h5>
+                        <p class="card-text text-muted">Grammar, reading comprehension, dan vocabulary</p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <small class="text-muted"><i class="bi bi-chat"></i> 512 Topik</small>
+                            <small class="text-muted"><i class="bi bi-people"></i> 834 Anggota</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card category-card">
+                    <div class="card-body text-center">
+                        <div class="category-icon bg-info bg-opacity-10 text-info mx-auto">
+                            <i class="bi bi-flask"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Fisika</h5>
+                        <p class="card-text text-muted">Mekanika, termodinamika, listrik, dan optik</p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <small class="text-muted"><i class="bi bi-chat"></i> 389 Topik</small>
+                            <small class="text-muted"><i class="bi bi-people"></i> 645 Anggota</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card category-card">
+                    <div class="card-body text-center">
+                        <div class="category-icon bg-purple bg-opacity-10" style="color: #6f42c1;">
+                            <i class="bi bi-atom"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Kimia</h5>
+                        <p class="card-text text-muted">Kimia organik, anorganik, dan fisika</p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <small class="text-muted"><i class="bi bi-chat"></i> 367 Topik</small>
+                            <small class="text-muted"><i class="bi bi-people"></i> 598 Anggota</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5><i class="bi bi-mortarboard-fill"></i> UTBK Forum</h5>
+                    <p>Platform diskusi terbaik untuk persiapan UTBK</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Link Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Tentang Kami</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Panduan Forum</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Hubungi Kami</h5>
+                    <p><i class="bi bi-envelope"></i> info@utbkforum.com</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2)">
+            <div class="text-center">
+                <small>&copy; 2024 UTBK Forum. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/load-modals.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/forum.js"></script>
+</body>

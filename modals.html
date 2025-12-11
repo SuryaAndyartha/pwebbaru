@@ -1,0 +1,247 @@
+<!-- modals.html - Reusable modal components -->
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="nama@email.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Ingat saya</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 rounded-pill">Login</button>
+                    <div class="text-center mt-3">
+                        <small>Belum punya akun? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">Daftar</a></small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold">Daftar Akun</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control" placeholder="Username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="nama@email.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Minimal 8 karakter" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Konfirmasi Password</label>
+                        <input type="password" class="form-control" placeholder="Ulangi password" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                        <label class="form-check-label" for="agreeTerms">Saya setuju dengan syarat dan ketentuan</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 rounded-pill">Daftar</button>
+                    <div class="text-center mt-3">
+                        <small>Sudah punya akun? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Create Topic Modal -->
+<div class="modal fade" id="createTopicModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold">Buat Topik Baru</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="createTopicForm">
+                    <div class="mb-3">
+                        <label class="form-label">Judul Topik</label>
+                        <input type="text" class="form-control" placeholder="Tulis judul topik yang jelas dan deskriptif" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Kategori</label>
+                        <select class="form-select" required>
+                            <option value="">Pilih Kategori</option>
+                            <option>Tes Potensi Skolastik</option>
+                            <option>Matematika</option>
+                            <option>Bahasa Indonesia</option>
+                            <option>Bahasa Inggris</option>
+                            <option>Fisika</option>
+                            <option>Kimia</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Isi Topik</label>
+                        <textarea class="form-control" rows="6" placeholder="Jelaskan pertanyaan atau topik yang ingin didiskusikan..." required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tag (opsional)</label>
+                        <input type="text" class="form-control" placeholder="Contoh: integral, limit, trigonometri">
+                        <small class="text-muted">Pisahkan dengan koma</small>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary rounded-pill px-4">Posting</button>
+                        <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Topic Detail Modal -->
+<div class="modal fade" id="topicDetailModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <div>
+                    <h5 class="modal-title fw-bold">Cara cepat menghitung integral tentu?</h5>
+                    <span class="badge bg-success badge-custom mt-2">Matematika</span>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Original Post -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="user-avatar me-3">RS</div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h6 class="mb-0">Rina Sari</h6>
+                                        <small class="text-muted">2 jam lalu</small>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit</a></li>
+                                            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash"></i> Hapus</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-flag"></i> Laporkan</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="mt-3">Saya kesulitan menghitung integral tentu dengan batas yang rumit. Ada tips atau trik khusus yang bisa dipake? Terutama untuk soal-soal UTBK yang waktunya terbatas.</p>
+                                <div class="d-flex gap-3 mt-3">
+                                    <button class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-hand-thumbs-up"></i> Like (8)
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-secondary">
+                                        <i class="bi bi-share"></i> Share
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comments Section -->
+                <div class="comment-section">
+                    <h6 class="fw-bold mb-3">12 Komentar</h6>
+                    
+                    <div class="comment-item">
+                        <div class="d-flex">
+                            <div class="user-avatar me-3" style="width: 40px; height: 40px; font-size: 0.9rem;">BH</div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-0">Budi Hermawan</h6>
+                                    <small class="text-muted">1 jam lalu</small>
+                                </div>
+                                <p class="mt-2 mb-2">Coba pake substitusi u dulu, biasanya lebih cepat. Kalau ada sin dan cos, bisa pake identitas trigonometri untuk sederhanakan.</p>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-sm btn-link text-decoration-none p-0">
+                                        <i class="bi bi-hand-thumbs-up"></i> 5
+                                    </button>
+                                    <button class="btn btn-sm btn-link text-decoration-none p-0">
+                                        <i class="bi bi-reply"></i> Balas
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Comment Form -->
+                    <div class="mt-4">
+                        <h6 class="fw-bold mb-3">Tambah Komentar</h6>
+                        <form>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="Tulis komentar Anda..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary rounded-pill px-4">Kirim Komentar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Profile Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold">Edit Profil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editProfileForm">
+                    <div class="text-center mb-4">
+                        <div class="user-avatar mx-auto mb-2" style="width: 100px; height: 100px; font-size: 2rem;">RS</div>
+                        <button type="button" class="btn btn-sm btn-outline-primary">Ganti Foto</button>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control" value="rinasari" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" value="rina@email.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Bio</label>
+                        <textarea class="form-control" rows="3" placeholder="Ceritakan tentang diri Anda..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Sekolah</label>
+                        <input type="text" class="form-control" placeholder="Nama sekolah">
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary rounded-pill px-4">Simpan</button>
+                        <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
