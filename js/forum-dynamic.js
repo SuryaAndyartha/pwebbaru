@@ -181,7 +181,7 @@ async function loadTopics(params = {}) {
     
     // Build query string
     const queryParams = new URLSearchParams(params);
-    
+            console.log('Load Detail Dipanggil, ID Diterima:', topicId);
     try {
         const response = await fetch(`api/topics.php?action=list&${queryParams}`);
         const data = await response.json();
