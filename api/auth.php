@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Jakarta');
 // api/auth.php - Authentication handler
 
 require_once '../config/database.php';
